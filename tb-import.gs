@@ -1,6 +1,6 @@
 function doGet() {
   return HtmlService
-  .createTemplateFromFile('table')
+  .createTemplateFromFile('tb-display')
   .evaluate();
 }
 
