@@ -1,3 +1,3 @@
 # ncade-gadgets
 
-Google gadgets used for ncade webstites.
+Google gadgets used for ncade websites.
