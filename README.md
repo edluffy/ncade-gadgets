@@ -1,13 +1,13 @@
 # ncade-gadgets
 
-Google gadgets used for ncade websites.
+**Google gadgets used for ncade websites.**
 </br>
-Planned:
+**Planned:**
 </br>
-*ad-wrapper*
+*-ad-wrapper*
 </br>
-*game-wrapper*
+*-game-wrapper*
 </br>
-*game-info*
+*-game-info*
 </br>
-*comments*
+*-comments*
