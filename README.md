@@ -4,10 +4,12 @@
 </br>
 **Planned:**
 </br>
-*-ad-wrapper*
+*- ad-wrapper*
 </br>
-*-game-wrapper*
+*- game-wrapper*
 </br>
-*-game-info*
+*- game-info*
 </br>
-*-comments*
+*- comments*
+</br>
+*- nav-bar*
