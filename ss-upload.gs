@@ -1,10 +1,3 @@
-function onOpen(e) {
-  SpreadsheetApp.getUi()
-  .createMenu('Inventory')
-  .addItem('Update', 'newPage')
-  .addToUi();
-}
-
 function newPage() {
    Logger.log("Script starting.");
 var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
