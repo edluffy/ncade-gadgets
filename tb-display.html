@@ -2,67 +2,37 @@
 <html>
 <head>
 <base target="_top">
-<style>
-@import url('https://fonts.googleapis.com/css?family=Electrolize');
-.card {
-box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.4);
-transition: 0.3s;
-width: 200px;
-border-radius: 15px;
-display:inline-block;
-margin: 5px;
-}
-.card:hover {
-box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.4);
-}
-img {
-border-radius: 15px 15px 0 0;
-height: 140px;
-width: 200px;
-}
-.container {
-padding: 4px 16px;
-font-family: 'Electrolize', sans-serif;
-font-size: 12px;
-text-transform: uppercase;
-}
-.title {
-width:100%;
-color: black;
-text-align: left;
-}
-.genre {
-width:100%;
-color: blue;
-text-align: left;
-}
-.plays {
-width:100%;
-color: green;
-text-align: right;
-}
-a {
-text-decoration: none;
-}
-</style>
-
+<?!= include('tb-style'); ?>
 </head>
+
 <body>
-
+<div>
+<button class="arrow up" onclick="scrollWin(0, -190)"></button>
+<button class="arrow down" onclick="scrollWin(0, 190)"></button>
+</div>
+<div style="padding-left: 30px; margin:0 auto">
 <? var data = getData(); ?>
-
-<? for (var i = 1; i < data.length; i++) { ?>
-
-<a href="https://sites.google.com/site/playfunblocked/games/<?= data[i][0] ?>">
+<?for (var i = 1; i < data.length; i++) { ?>
+<? if(query == null || data[i].indexOf(query) >= 0 ){?>
+<a href="https://sites.google.com/site/playfunblocked/games/<?= data[i][0] ?>" target="_parent">
 <div class="card">
-<img src="<?= data[i][11] ?>" alt="<?= data[i][0] ?>">
+<img src="<?= data[i][12] ?>" alt="<?= data[i][0] ?>">
 <div class="container">
-<b class="title"><?= data[i][1] ?></b> 
+<b class="title"><?= data[i][3] ?></b>
+<b class="status"><?= data[i][2] ?></b> 
 <br/>
-<b class="plays"><?= data[i][4] ?></b>
+<b class="plays"><?= data[i][1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") ?> Plays</b>
 </div>
 </div>
 </a >
 <? } ?>
+<? } ?>
+</div>
+<br><br>
 </body>
 </html>
+<script>
+function scrollWin(x, y) {
+    window.scrollBy(x, y);
+}
+</script>

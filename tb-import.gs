@@ -1,12 +1,18 @@
-function doGet() {
-  return HtmlService
-  .createTemplateFromFile('tb-display')
-  .evaluate();
+function doGet(e) {  
+  var t = HtmlService.createTemplateFromFile('tb-display')
+   t.query =  e.parameter.content
+   Logger.log(t.query);
+  return t.evaluate().setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
-function getData() {
+function include(File) {
+  return HtmlService.createHtmlOutputFromFile(File).getContent();
+};
+
+function getData() { 
   return SpreadsheetApp
-  .getActiveSheet()
+  .openById("1dMHyHtvhQZDso5hSpKTZ1oMTZJoOjZiPlXHm_eioBj8")
   .getDataRange()
-  .getValues();
+  .getValues()
+  
 }
