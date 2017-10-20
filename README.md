@@ -13,3 +13,10 @@
 *- comments*
 </br>
 *- nav-bar*
+
+**Completed:**
+</br>
+*- ss-functions*
+</br>
+*- tb-display*
+</br>
