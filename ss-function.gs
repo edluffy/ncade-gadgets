@@ -1,7 +1,6 @@
 function onOpen() {
-  var ui = SpreadsheetApp.getUi();
-  
   // Create dropdown inventory menu
+  var ui = SpreadsheetApp.getUi();
   ui.createMenu('Inventory')
   .addItem('Launch Function', 'siteEditor')
   .addItem('Server Check', 'serverCheck')
