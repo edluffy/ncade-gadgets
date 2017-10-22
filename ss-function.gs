@@ -114,17 +114,6 @@ function siteEditor(){
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /*     *ServerCheck function*
 - Check for dead links
 - Check for redirects
