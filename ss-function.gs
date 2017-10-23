@@ -13,6 +13,8 @@ function onOpen() {
 - Delete page        
 */
 function siteEditor(){
+  
+  // Open correct spreadsheet
   Logger.log("Site Editor Activated");
   var sheet = SpreadsheetApp.getActiveSheet()
   var range = sheet.getRange("A2:N")
@@ -74,11 +76,10 @@ function siteEditor(){
         
         // *SEND FUNCTION*  
       case 'send':
+        
         // Locate template and replace variables
         var template = site.getTemplates()[0];
         var templatehtml = template.getHtmlContent();
-        
-        
         var newhtml = templatehtml
         .split("{{swf}}").join(SRC)
         .split("%7B%7Bswf%7D%7D").join(SRC)
